@@ -97,11 +97,21 @@ h1 {
 .accordion:hover .acc-plus-svg{
     display: block;
 }
+.acc-item:hover .acc-plus-svg {
+     transform: rotateZ(45deg);
+ }
 .acc-item:hover .acc-img{
     height: 58.9rem;
 }
-.acc-item:hover .acc-plus-svg {
-    transform: rotateZ(45deg);
+@media screen and (max-width: 82rem) {
+    .acc-item:hover .acc-img{
+        height: 46rem;
+    }
+}
+@media screen and (max-width: 32rem) {
+    .acc-item:hover .acc-img{
+        height: 23.6rem;
+    }
 }
 
 
