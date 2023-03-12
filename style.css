@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 2rem;
+}
+@media screen and (max-width: 82rem) {
+    h1 { font-size: 2.6rem; }
+}
+@media screen and (max-width: 32rem) {
+    h1 { font-size: 2.2rem; }
+}
+
+
+.accordion {
+    height: 100rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem;
+    margin: auto;
+}
+@media screen and (max-width: 82rem) {
+    .accordion { font-size: 1.4rem; }
+}
+@media screen and (max-width: 32rem) {
+    .accordion { font-size: 1.2rem; }
+}
+
+
+.acc-item {
+    max-width: 100%;
+    border-top: .1rem solid #D3D9E1;
+    cursor: pointer;
+}
+.acc-item:last-child{
+    border-bottom: .1rem solid #D3D9E1;
+}
+
+
+.acc-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0059D9;
+    cursor: pointer;
+    padding: 1rem 0;
+}
+
+.acc-text {
+    margin-right: 1.5rem;
+}
+
+.acc-plus-svg {
+    margin-right: 1rem;
+    display: none;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+
+.acc-input {
+    display: none;
+}
+
+.acc-img {
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    object-fit: cover;
+    transition: height .7s ease-in-out;
+}
+
+
+.accordion:hover .acc-title{
+    color: #000000;
+}
+.accordion:hover .acc-plus-svg{
+    display: block;
+}
+.acc-item:hover .acc-plus-svg {
+     transform: rotateZ(45deg);
+ }
+.acc-item:hover .acc-img{
+    height: 58.9rem;
+}
+@media screen and (max-width: 82rem) {
+    .acc-item:hover .acc-img{
+        height: 46rem;
+    }
+}
+@media screen and (max-width: 32rem) {
+    .acc-item:hover .acc-img{
+        height: 23.6rem;
+    }
+}
+
+
+.acc-input:checked ~ .acc-img{
+    height: 58.9rem;
+}
+@media screen and (max-width: 82rem) {
+    .acc-input:checked ~ .acc-img{
+        height: 46rem;
+    }
+}
+@media screen and (max-width: 32rem) {
+    .acc-input:checked ~ .acc-img{
+        height: 23.6rem;
+    }
+}
+
+
+@media screen and (max-width: 82rem) {
+    img{
+        width: 82rem;
+        height: 46rem;
+    }
+}
+@media screen and (max-width: 32rem) {
+    img{
+        width: 42rem;
+        height: 23.6rem;
+    }
+}
+
+
+.acc-input:checked ~ .acc-title {
+    color: #000000;
+}
+.acc-input:checked + .acc-title .acc-plus-svg {
+    transform: rotateZ(45deg);
+}
+
+
